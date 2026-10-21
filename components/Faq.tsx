@@ -1,22 +1,24 @@
+import type { CSSProperties } from "react";
+import Lines from "@/components/Lines";
 import { QUESTIONS } from "@/content/faq";
 
 export default function Faq() {
   return (
     <section className="faq" id="duvidas">
-      <div className="wrap grid12 faq-grid">
+      <div className="wrap faq-grid">
         <div className="faq-head">
-          <h2 className="h2">Dúvidas frequentes</h2>
-          <p>Se a sua não estiver aqui, pergunte pelo WhatsApp.</p>
+          <h2 className="h2" data-lines>
+            <Lines lines={["Dúvidas", "frequentes"]} />
+          </h2>
+          <p data-reveal style={{ "--d": "160ms" } as CSSProperties}>
+            Se a sua não estiver aqui, pergunte pelo WhatsApp.
+          </p>
         </div>
-        <div className="faq-list">
+        <div className="faq-text" data-reveal style={{ "--d": "120ms" } as CSSProperties}>
           {QUESTIONS.map((item) => (
-            <details key={item.q}>
-              <summary>
-                {item.q}
-                <span className="pm" aria-hidden="true" />
-              </summary>
-              <p className="ans">{item.a}</p>
-            </details>
+            <p key={item.q}>
+              <span className="faq-q">{item.q}</span> {item.a}
+            </p>
           ))}
         </div>
       </div>

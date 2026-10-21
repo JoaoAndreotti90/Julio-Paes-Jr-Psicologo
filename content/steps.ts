@@ -6,18 +6,18 @@ export type ProcessStep = {
 
 export const STEPS: ProcessStep[] = [
   {
-    n: "Primeiro",
-    title: "Uma conversa inicial",
-    text: "Você conta o que motivou a procura e tira dúvidas. Juntos, vemos se faz sentido seguir."
+    n: "Primeiro contato",
+    title: "Entrevista inicial",
+    text: "Um momento para compreender as motivações que levaram à busca por atendimento, esclarecer dúvidas e apresentar a proposta de trabalho, avaliando conjuntamente os próximos passos."
   },
   {
-    n: "Depois",
-    title: "Sessões regulares",
-    text: "Em geral semanais, no mesmo dia e horário, presenciais ou por vídeo."
+    n: "Sessões regulares",
+    title: "Processo terapêutico",
+    text: "Os atendimentos são realizados, geralmente, com frequência semanal, em dia e horário previamente acordados, nas modalidades presencial ou online."
   },
   {
-    n: "Ao longo do tempo",
-    title: "Acompanhamento",
-    text: "Os objetivos são revistos periodicamente. No atendimento infantil, isso inclui conversas com os responsáveis."
+    n: "Acompanhamento",
+    title: "Avaliação contínua",
+    text: "Ao longo do processo, os objetivos terapêuticos são revisados periodicamente, considerando as necessidades e a evolução de cada caso. No atendimento de crianças e adolescentes, também podem ocorrer encontros com os responsáveis, conforme a necessidade clínica e as diretrizes éticas da Psicologia."
   }
 ];

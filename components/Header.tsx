@@ -41,10 +41,8 @@ export default function Header() {
     <header id="siteHeader" className={scrolled ? "scrolled" : ""}>
       <div className="wrap nav">
         <a href="#top" className="brand" aria-label="Julio Paes Jr., psicólogo. Voltar ao topo">
-          <span className="wordmark">
-            Julio Paes<span className="suffix">Jr.</span>
-          </span>
-          <span className="brand-sub">Psicólogo · CRP 06/239409</span>
+          <span className="wordmark">Julio Paes Jr.</span>
+          <span className="brand-sub">Psicólogo, CRP 06/239409</span>
         </a>
         <nav aria-label="Principal">
           <ul className={"nav-links" + (menuOpen ? " open" : "")} id="navlist">

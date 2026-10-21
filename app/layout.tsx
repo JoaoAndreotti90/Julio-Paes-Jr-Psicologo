@@ -1,29 +1,33 @@
 import type { Metadata } from "next";
+import "@fontsource/newsreader/latin-500.css";
+import "@fontsource/source-sans-3/latin-400.css";
+import "@fontsource/source-sans-3/latin-600.css";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Julio Paes Jr. Psicólogo",
+  title: "Julio Paes Jr., psicólogo em Agudos/SP",
   description:
-    "Julio Paes Jr., psicólogo (CRP 06/239409). Psicoterapia para crianças, adolescentes, adultos e casais, presencial ou online.",
+    "Julio Paes Jr., psicólogo (CRP 06/239409). Psicoterapia para crianças, adolescentes, adultos, casais e idosos, presencial em Agudos/SP ou online.",
   openGraph: {
-    title: "Julio Paes Jr. — Psicólogo",
+    title: "Julio Paes Jr., psicólogo em Agudos/SP",
     description:
-      "Psicoterapia para crianças, adolescentes, adultos e casais, presencial ou online.",
+      "Psicoterapia para crianças, adolescentes, adultos, casais e idosos, presencial ou online.",
     type: "website"
   }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Petit+Formal+Script&family=Outfit:wght@400;500;600&display=swap"
+        {/* Ativa as animações só com JavaScript rodando; se o script de movimento não subir em 2,5 s, tudo aparece normalmente */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},2500);"
+          }}
         />
       </head>
       <body>{children}</body>

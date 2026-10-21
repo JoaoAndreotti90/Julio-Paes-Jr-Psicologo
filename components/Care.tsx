@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState, type Dispatch, type KeyboardEvent, type SetStateAction } from "react";
-import ArrowIcon from "@/components/ArrowIcon";
+import { useRef, useState, type CSSProperties, type Dispatch, type KeyboardEvent, type SetStateAction } from "react";
+import Lines from "@/components/Lines";
 import { PANELS } from "@/content/care";
 import type { BookingState } from "@/lib/booking";
 
@@ -38,14 +38,15 @@ export default function Care({ setBooking }: CareProps) {
     <section className="care" id="atendimento">
       <div className="wrap">
         <div className="sec-head">
-          <h2 className="h2">
-            Atendimento para cada
-            <br />
-            fase da vida
+          <h2 className="h2" data-lines>
+            <Lines lines={["Atendimento para cada", "fase da vida"]} />
           </h2>
-          <p>Cada público tem um formato próprio de atendimento, combinado desde a primeira conversa.</p>
+          <p data-reveal style={{ "--d": "180ms" } as CSSProperties}>
+            Cada público tem um formato próprio de atendimento, combinado desde a primeira conversa.
+          </p>
         </div>
 
+        <div data-reveal>
         <div className="tabs" role="tablist" aria-label="Públicos atendidos">
           {PANELS.map((panel, index) => (
             <button
@@ -87,7 +88,6 @@ export default function Care({ setBooking }: CareProps) {
               </div>
               <a className="btn btn-ghost" href="#agendar" onClick={() => handlePresetClick(panel.presetQuem)}>
                 {panel.ctaLabel}
-                <ArrowIcon />
               </a>
             </div>
             <div className="topics">
@@ -100,6 +100,7 @@ export default function Care({ setBooking }: CareProps) {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </section>
   );

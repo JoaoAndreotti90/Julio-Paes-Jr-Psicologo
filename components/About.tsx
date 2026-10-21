@@ -1,65 +1,63 @@
 import Image from "next/image";
+import retratoImg from "@/public/images/julio-retrato.jpg";
+import type { CSSProperties } from "react";
+import Lines from "@/components/Lines";
+
+const STORY = [
+  "Minha paixão pela Psicologia vem desde a infância, quando já gostava de ajudar as pessoas, seja com conselhos, ouvindo seus problemas ou buscando ajudar na resolução de conflitos. Com o passar dos anos, percebi que esse desejo de ajudar poderia se tornar minha profissão.",
+  "Grande parte da minha escolha também teve a influência do meu pai, Julio Paes, neuropsicopedagogo, que sempre me apoiou, me ensinou e esteve ao meu lado durante toda a minha graduação.",
+  "Durante a faculdade, conheci diferentes abordagens da Psicologia, mas foi no último ano que me encantei pela abordagem junguiana, que despertou em mim o interesse em compreender melhor a história, os sentimentos e a individualidade de cada pessoa.",
+  "Hoje, dou início a uma nova etapa da minha vida, realizando um sonho que me acompanha desde criança: ajudar pessoas. Quero exercer a Psicologia com dedicação, respeito e responsabilidade, oferecendo um espaço de acolhimento e escuta, sempre guiado pelos princípios éticos da profissão."
+];
+
+const CREDS = [
+  { label: "Graduação", value: "Psicologia pela FIB (Faculdades Integradas de Bauru), 2026" },
+  { label: "Abordagem", value: "Psicologia Analítica (Junguiana)" },
+  { label: "Registro", value: "CRP 06/239409, ativo" }
+];
 
 export default function About() {
   return (
     <section className="about" id="sobre">
-      <div className="wrap grid12 about-grid">
+      <div className="wrap about-grid">
+        <figure className="about-photo" data-shutter>
+          <Image
+            src={retratoImg}
+            placeholder="blur"
+            loading="eager"
+            alt="Retrato de Julio Paes Jr., de braços cruzados, com estante de livros ao fundo"
+            fill
+            sizes="(max-width: 900px) 100vw, 40vw"
+            style={{ objectFit: "cover", objectPosition: "45% 22%" }}
+          />
+        </figure>
+
         <div className="about-text">
-          <h2 className="h2">Minha trajetória</h2>
+          <h2 className="h2" data-lines>
+            <Lines lines={["Minha trajetória e paixão", "pela Psicologia"]} />
+          </h2>
           <div className="story">
-            <p>
-              Minha trajetória começou na graduação, quando percebi que a escuta, mais do que
-              qualquer técnica, era o que transformava uma conversa em cuidado. Desde então venho
-              construindo uma prática voltada para processos reais: sem fórmulas prontas e sem
-              pressa para &quot;resolver&quot;, sempre no tempo de quem está do outro lado.
-            </p>
-            <p>
-              Hoje atendo crianças, adolescentes, adultos e casais. Em cada fase da vida o ponto de
-              partida é o mesmo: escutar com atenção e construir, junto com quem chega, um caminho
-              que faça sentido.
-            </p>
-          </div>
-
-          <blockquote>
-            Mudança real acontece quando existe espaço seguro para pensar em voz alta.
-          </blockquote>
-
-          <div id="formacao">
-            <p className="creds-title">Formação</p>
-            <dl className="creds">
-              <div>
-                <dt>Graduação</dt>
-                <dd>Psicologia · FIB – Faculdades Integradas de Bauru, 2026</dd>
-              </div>
-              <div>
-                <dt>Abordagem</dt>
-                <dd>Psicologia Analítica (junguiana)</dd>
-              </div>
-              <div>
-                <dt>Registro</dt>
-                <dd>CRP 06/239409 · ativo</dd>
-              </div>
-            </dl>
+            {STORY.map((paragraph, i) => (
+              <p key={i} data-reveal style={{ "--d": `${Math.min(i, 3) * 80}ms` } as CSSProperties}>
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
+      </div>
 
-        <aside className="about-side">
-          <div className="sticky">
-            <figure style={{ margin: 0 }}>
-              <div className="print">
-                <div className="print-img">
-                  <Image
-                    src="/images/julio-about.jpg"
-                    alt="Julio Paes Jr. de jaleco, em atendimento no consultório"
-                    fill
-                    sizes="(max-width: 900px) 100vw, 33vw"
-                    style={{ objectFit: "cover", objectPosition: "40% 20%" }}
-                  />
-                </div>
-              </div>
-            </figure>
-          </div>
-        </aside>
+      <div className="wrap" id="formacao">
+        <h3 className="creds-title" data-reveal>
+          Formação
+        </h3>
+        <dl className="creds">
+          {CREDS.map((item, i) => (
+            <div key={item.label} data-reveal style={{ "--d": `${i * 80}ms` } as CSSProperties}>
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

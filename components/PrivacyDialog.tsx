@@ -23,14 +23,14 @@ export default function PrivacyDialog({ dialogRef, onClose }: PrivacyDialogProps
         <h3 id="privacyTitle">Política de privacidade</h3>
         <p>
           <strong>Quem é o responsável por este site:</strong> Julio Paes Jr., psicólogo (CRP
-          06/239409), atendendo como pessoa física. Contato: psicologojuliopaesjr@gmail.com · Rua
-          José de Rosa, 420 · Agudos/SP.
+          06/239409), atendendo como pessoa física. E-mail: psicologojuliopaesjr@gmail.com.
+          Endereço: Rua José de Rosa, 420, Agudos/SP.
         </p>
         <p>
           <strong>Este site não coleta nem guarda nenhum dado seu.</strong> O formulário de
-          agendamento só monta uma mensagem com as opções que você escolhe e abre o seu WhatsApp —
-          a partir daí a conversa acontece direto entre você e o WhatsApp do Julio, sem passar por
-          este site, por nenhum servidor ou por terceiros.
+          agendamento só monta uma mensagem com as opções que você escolhe e abre o seu WhatsApp. A
+          partir daí a conversa acontece direto entre você e o Julio, sem passar por este site, por
+          nenhum servidor ou por terceiros.
         </p>
         <p>Não usamos cookies, pixels ou qualquer ferramenta de rastreamento ou análise de navegação.</p>
         <p>

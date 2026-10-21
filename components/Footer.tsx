@@ -19,14 +19,12 @@ export default function Footer() {
       <footer>
         <div className="wrap grid12 foot">
           <div className="brand">
-            <span className="wordmark">
-              Julio Paes<span className="suffix">Jr.</span>
-            </span>
-            <span className="brand-sub">Psicólogo · CRP 06/239409</span>
+            <span className="wordmark">Julio Paes Jr.</span>
+            <span className="brand-sub">Psicólogo, CRP 06/239409</span>
           </div>
           <div className="foot-col">
             <strong>Atendimento</strong>
-            <span>Crianças, adolescentes, adultos e casais</span>
+            <span>Crianças, adolescentes, adultos, casais e idosos</span>
             <span>Presencial e online</span>
           </div>
           <div className="foot-col">

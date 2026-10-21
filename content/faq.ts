@@ -6,27 +6,27 @@ export type FaqItem = {
 export const QUESTIONS: FaqItem[] = [
   {
     q: "Como é a primeira conversa?",
-    a: "É um encontro para entender o que motivou a procura e explicar como o processo funciona. A partir dele, decidimos juntos se faz sentido continuar."
+    a: "É um momento para compreender suas necessidades, esclarecer dúvidas e explicar como funciona a terapia, avaliando juntos os próximos passos."
   },
   {
     q: "Como funciona a terapia com crianças?",
-    a: "As sessões usam recursos lúdicos, como brincadeiras, desenhos e histórias, porque é assim que a criança se expressa melhor. Os responsáveis participam de encontros periódicos para acompanhar o processo."
+    a: "O atendimento utiliza brincadeiras, desenhos e histórias para facilitar a expressão dos sentimentos e emoções da criança. Os responsáveis participam de encontros periódicos para acompanhar o desenvolvimento do processo terapêutico."
   },
   {
     q: "O que é compartilhado com os pais?",
-    a: "No atendimento de crianças e adolescentes, o Código de Ética do psicólogo prevê que seja comunicado aos responsáveis apenas o essencial para o cuidado. O restante é preservado."
+    a: "Os responsáveis recebem informações essenciais para o cuidado e o bem-estar da criança ou do adolescente, preservando-se o sigilo sobre os demais conteúdos das sessões, conforme as diretrizes éticas da Psicologia."
+  },
+  {
+    q: "Como funciona a terapia de casal?",
+    a: "A terapia de casal é um espaço de escuta e reflexão, no qual ambos podem expressar seus sentimentos, necessidades e expectativas. As sessões são conduzidas com foco na relação, buscando compreender os conflitos recorrentes, aprimorar a comunicação e fortalecer a compreensão mútua, respeitando a individualidade de cada pessoa e a história do casal."
+  },
+  {
+    q: "O que compartilho nas sessões é mantido em sigilo?",
+    a: "Sim. O sigilo profissional é um dever ético do psicólogo, previsto no Código de Ética Profissional. Todas as informações compartilhadas durante o atendimento são tratadas com confidencialidade, respeito e responsabilidade, visando preservar sua privacidade e proporcionar um ambiente seguro e acolhedor. Existem, contudo, situações excepcionais previstas nas normas éticas e na legislação aplicável."
   },
   {
     q: "A terapia online funciona da mesma forma?",
     a: "Sim. As sessões online seguem o mesmo cuidado e o mesmo sigilo das presenciais, por chamada de vídeo, de onde você estiver."
-  },
-  {
-    q: "Como funciona a terapia de casal?",
-    a: "As sessões acontecem com as duas pessoas juntas. O foco é a relação: comunicação, conflitos que se repetem e o que cada um espera do vínculo."
-  },
-  {
-    q: "O que eu falo fica entre nós?",
-    a: "Sim. O sigilo é um dever ético do psicólogo, previsto no Código de Ética Profissional."
   },
   {
     q: "Quais são os valores?",

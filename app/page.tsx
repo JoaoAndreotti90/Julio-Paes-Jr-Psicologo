@@ -2,9 +2,12 @@
 
 import { useState } from "react";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import Intro from "@/components/Intro";
 import Care from "@/components/Care";
 import About from "@/components/About";
+import Statement from "@/components/Statement";
+import Gallery from "@/components/Gallery";
+import Motion from "@/components/Motion";
 import Steps from "@/components/Steps";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
@@ -18,14 +21,17 @@ export default function Page() {
     <>
       <Header />
       <main id="top">
-        <Hero booking={booking} setBooking={setBooking} />
+        <Intro />
         <Care setBooking={setBooking} />
+        <Statement />
         <About />
+        <Gallery />
         <Steps />
         <Faq />
-        <Contact />
+        <Contact booking={booking} setBooking={setBooking} />
       </main>
       <Footer />
+      <Motion />
     </>
   );
 }

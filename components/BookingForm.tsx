@@ -23,7 +23,7 @@ export default function BookingForm({ booking, setBooking }: BookingFormProps) {
       aria-labelledby="booking-title"
       onSubmit={(event) => event.preventDefault()}
     >
-      <h2 id="booking-title">Peça seu primeiro horário</h2>
+      <h2 id="booking-title">Agendar horário</h2>
 
       <fieldset>
         <legend>Para quem é</legend>
