@@ -19,7 +19,7 @@ export default function Intro() {
             se escutar
           </h1>
           <p className="lede">
-            Atendimento psicológico para crianças, adolescentes, adultos e casais, nas modalidades
+            Atendimento psicológico para crianças, adolescentes, adultos, casais e idosos, nas modalidades
             presencial e online.
           </p>
           <div className="hero-actions">

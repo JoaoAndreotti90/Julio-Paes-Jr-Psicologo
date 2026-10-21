@@ -25,7 +25,7 @@ const PHOTOS = [
 export default function Gallery() {
   return (
     <section className="gallery" aria-label="Fotos do consultório">
-      <div className="gallery-grid">
+      <div className="wrap gallery-grid">
         {PHOTOS.map((photo, i) => (
           <figure
             key={photo.alt}
