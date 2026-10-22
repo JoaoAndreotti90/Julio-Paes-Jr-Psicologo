@@ -1,8 +1,28 @@
-import type { CSSProperties } from "react";
+"use client";
+
+import { useEffect, useState, type CSSProperties, type MouseEvent } from "react";
 import Lines from "@/components/Lines";
 import { QUESTIONS } from "@/content/faq";
 
+// No computador as respostas ficam todas abertas, em duas colunas.
+// No celular viram uma sanfona: a pessoa toca na pergunta e a resposta abre.
+const DESKTOP_QUERY = "(min-width: 901px)";
+
 export default function Faq() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(DESKTOP_QUERY);
+    const update = () => setIsDesktop(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  function keepOpenOnDesktop(event: MouseEvent<HTMLElement>) {
+    if (isDesktop) event.preventDefault();
+  }
+
   return (
     <section className="faq" id="duvidas">
       <div className="wrap faq-grid">
@@ -16,9 +36,12 @@ export default function Faq() {
         </div>
         <div className="faq-text" data-reveal style={{ "--d": "120ms" } as CSSProperties}>
           {QUESTIONS.map((item) => (
-            <p key={item.q}>
-              <span className="faq-q">{item.q}</span> {item.a}
-            </p>
+            <details key={item.q} className="qa" open={isDesktop || undefined}>
+              <summary className="faq-q" onClick={keepOpenOnDesktop} tabIndex={isDesktop ? -1 : undefined}>
+                {item.q}
+              </summary>
+              <p>{item.a}</p>
+            </details>
           ))}
         </div>
       </div>
