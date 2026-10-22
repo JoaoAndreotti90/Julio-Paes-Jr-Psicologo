@@ -480,7 +480,7 @@ dialog.legal .legal-close:hover{ background:var(--line); }
     transform:none; transition:transform .9s var(--ease-expo) calc(var(--i, 0) * 90ms);
   }
   .js [data-shutter] img{ clip-path:inset(0 0 100% 0); }
-  .js [data-shutter][data-in] img{ clip-path:inset(0); transition:clip-path 1.2s var(--ease-in-out); }
+  .js [data-shutter][data-in] img{ clip-path:inset(0); transition:clip-path .7s var(--ease-out); }
 }
 @media (max-width:900px){
   [data-lines] .line, [data-lines] .line > span{ display:inline; }
